@@ -1,6 +1,6 @@
 # Manova demo using Skulls dataset.
 
-# Add Your Name Here
+# Nicholas Tysiachney
 
 rm(list = ls()) # clear out the variables from memory to make a clean execution of the code.
 
