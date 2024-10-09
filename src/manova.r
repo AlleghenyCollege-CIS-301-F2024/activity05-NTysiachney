@@ -63,4 +63,13 @@ ggplot(means_long, aes(x = epoch, y = mean_value, fill = measurement)) +
 # Add manova code below
 ##################################
 
-# TODO
+skulls.manova1 <- 
+  manova(cbind(mb, bh, bl, nh) ~ as.factor(epoch),
+         data = skulls)
+
+# prepare different types of manova tests
+
+summary(skulls.manova1, test = "Hotelling-Lawley")
+summary(skulls.manova1, test = "Roy")
+summary(skulls.manova1, test = "Pillai")
+summary(skulls.manova1, test = "Wilks")
