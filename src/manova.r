@@ -73,3 +73,12 @@ summary(skulls.manova1, test = "Hotelling-Lawley")
 summary(skulls.manova1, test = "Roy")
 summary(skulls.manova1, test = "Pillai")
 summary(skulls.manova1, test = "Wilks")
+
+summary.aov(skulls.manova1)
+
+skulls.manova2 <- 
+  manova(cbind(mb, bh, bl, nh) ~ as.factor(epoch),
+         data = skulls,
+         subset = as.factor(epoch) %in% c("c4000BC", "c200BC")
+         )
+summary(skulls.manova2)
